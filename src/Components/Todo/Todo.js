@@ -24,25 +24,21 @@ function Todo(props) {
 
     function deleteRow(e) {
         const idx = e.target.getAttribute('idx');
-        todoList.splice(idx, 1);
-        setTodoList([...todoList]);
+        let tmp = [...todoList];
+        tmp.splice(idx, 1);
+        setTodoList([...tmp]);
         clearField();
     }
 
     function updateTodoEntry (idx, val) {
-        todoList[idx] = val;
-        setTodoList([
-            ...todoList
-        ]);
+        let tmp = [...todoList];
+        tmp[idx] = val;
+        setTodoList([...tmp]);
         clearField();
     }
 
-
     const addTodoEntry = (event) => {
-        setTodoList([
-            ...todoList,
-            todoEntry
-        ]);
+        setTodoList([...todoList, todoEntry]);
         clearField();
     }
 

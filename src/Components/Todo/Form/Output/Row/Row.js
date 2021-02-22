@@ -38,13 +38,14 @@ function Row(props) {
         if(!rowEditState) {
             return props.entry;
         } else {
-            return <input   type='text' 
-                            name='fieldentry' 
-                            value={fieldEntry} 
-                            idx={props.idx} 
-                            ref={inputField}
-                            onKeyPress={enterFunc}
-                            onChange={e => setFieldEntry(e.target.value)}
+            return <input   
+                        type='text' 
+                        name='fieldentry' 
+                        value={fieldEntry} 
+                        idx={props.idx} 
+                        ref={inputField}
+                        onKeyPress={enterFunc}
+                        onChange={e => setFieldEntry(e.target.value)}
                     />
             
         }
