@@ -1,0 +1,9 @@
+.rowEntry {
+    display: inline-block;
+}
+
+.rowControls {
+    display: inline-block;
+    margin-left: 10px;
+}
+
